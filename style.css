@@ -1,0 +1,138 @@
+/* =========================================
+   VIVATICKETS - STYLESHEET PRINCIPAL
+   ========================================= */
+
+/* Importar a fonte Urbanist para um visual moderno */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap');
+
+/* --- Variáveis Globais (Facilita a mudança de cores no futuro) --- */
+:root {
+    --color-lime: #e0ff4f;
+    --color-lime-hover: #c4e03d;
+    --color-bg-dark: #161616;
+    --color-bg-card: #1a1a1a;
+    --color-text-muted: #a0a0a0;
+}
+
+/* --- Base Geral --- */
+body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-muted);
+    font-family: 'Urbanist', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Cor de destaque Electric Lime */
+.text-lime {
+    color: var(--color-lime) !important;
+}
+
+/* --- Botão Principal Sólido --- */
+.btn-lime {
+    background-color: var(--color-lime);
+    color: #1a1a1a;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-lime:hover {
+    background-color: var(--color-lime-hover);
+    color: #1a1a1a;
+    box-shadow: 0 0 15px rgba(224, 255, 79, 0.4); /* Efeito de brilho "Neon" */
+    transform: translateY(-2px);
+}
+
+/* --- Botão Outline (Navbar e Ações Secundárias) --- */
+.btn-outline-lime {
+    color: var(--color-lime) !important;
+    border: 1px solid var(--color-lime) !important;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-lime:hover {
+    background-color: var(--color-lime) !important;
+    color: #1a1a1a !important;
+    box-shadow: 0 0 15px rgba(224, 255, 79, 0.4);
+}
+
+/* --- Navegação Navbar --- */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--color-lime);
+}
+
+/* --- Cartões de Eventos (Feature Cards) --- */
+.feature-card {
+    background-color: var(--color-bg-card);
+    border-radius: 24px;
+    border: 1px solid #333;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    border-color: var(--color-lime);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* Conteúdo interior do cartão */
+.feature-card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Garante alinhamento consistente no fundo */
+}
+
+/* Tipografia e Ícones específicos dos Cartões */
+.feature-card .icon {
+    font-size: 45px;
+    color: var(--color-lime);
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Navegação por Abas (Admin Dashboard) --- */
+.custom-tabs {
+    border-bottom: 1px solid #333;
+}
+
+.custom-tabs .nav-link {
+    color: var(--color-text-muted);
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 20px 15px 20px;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.custom-tabs .nav-link:hover {
+    color: #ffffff;
+    border-color: transparent;
+}
+
+.custom-tabs .nav-link.active {
+    color: var(--color-lime) !important;
+    background-color: transparent !important;
+    border-bottom: 2px solid var(--color-lime) !important;
+}
